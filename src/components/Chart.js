@@ -66,8 +66,6 @@ class Chart extends Component {
           }
         return (
             <div className="container">
-                <h3>Chart Data</h3>
-                <hr/>
                  <div className="chart">
                     <Line 
                         data={sales}

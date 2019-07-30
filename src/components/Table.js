@@ -7,8 +7,6 @@ class Table extends Component {
     render() {
         return (
             <div className="container">
-            <h3>Table Data</h3>
-            <hr/>
               <div>
                 <table style={{width: "100%", marginBottom: "50px"}}>
                   <tr id="tableHeader">

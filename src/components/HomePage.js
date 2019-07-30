@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Grid from '@material-ui/core/Grid';
 import { fetchData } from '../store/actions/dataAction';
 import Chart from './Chart';
 import Table from './Table';
 import Details from './Details';
+import Header from './Header';
 
 
 
@@ -19,10 +21,27 @@ import Details from './Details';
         if (this.props.data[0]) {
             console.log(this.props.data[0].sales[0])
             return (
-              <div className="App">
-                <Chart salesData={this.props.data[0].sales} />
-                <Table tableData={this.props.data[0].sales}/>
-                <Details detailsData={this.props.data[0].details} image={this.props.data[0].image}/>
+              <div className="home">
+                <Header/>
+                <Grid container style={{backgroundColor: "white"}}>
+                    <Grid className="details" item sm={4}>
+                        <div className="container">
+                            <Details 
+                            detailsData={this.props.data[0].details} 
+                            image={this.props.data[0].image}
+                            title={this.props.data[0].title}
+                            subtitle={this.props.data[0].subtitle}/>
+                        </div>
+                </Grid>
+                <Grid className="sales" item sm={8}>
+                        <div className="container">
+                             <Chart salesData={this.props.data[0].sales} />
+                        </div>
+                        <div className="container">
+                            <Table tableData={this.props.data[0].sales} />
+                        </div>
+                    </Grid>
+                </Grid>
               </div>
             );
           } else return null
