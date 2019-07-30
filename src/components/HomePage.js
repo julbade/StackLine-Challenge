@@ -7,6 +7,7 @@ import Table from './Table';
 import Details from './Details';
 import Header from './Header';
 
+import '../styles/homepage.css';
 
 
  class HomePage extends Component {
@@ -25,22 +26,24 @@ import Header from './Header';
                 <Header/>
                 <Grid container style={{backgroundColor: "white"}}>
                     <Grid className="details" item sm={4}>
-                        <div className="container">
+                        <div  className="container">
                             <Details 
                             detailsData={this.props.data[0].details} 
                             image={this.props.data[0].image}
                             title={this.props.data[0].title}
-                            subtitle={this.props.data[0].subtitle}/>
+                            subtitle={this.props.data[0].subtitle}
+                            tags={this.props.data[0].tags}
+                            />
                         </div>
                 </Grid>
-                <Grid className="sales" item sm={8}>
+                <Grid  className="sales" item sm={8}>
                         <div className="container">
                              <Chart salesData={this.props.data[0].sales} />
-                        </div>
+                        </div><br/>
                         <div className="container">
                             <Table tableData={this.props.data[0].sales} />
                         </div>
-                    </Grid>
+                    </Grid> 
                 </Grid>
               </div>
             );

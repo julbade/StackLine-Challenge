@@ -13,8 +13,8 @@ class Chart extends Component {
                 type: 'line',
                 fill: false,
                 lineTension: 0.5,
-                backgroundColor: 'rgba(75,192,192,0.4)',
-                borderColor: 'rgba(75,192,192,1)',
+                backgroundColor: '#45A7F5',
+                borderColor: '#45A7F5',
                 borderCapStyle: 'butt',
                 borderJoinStyle: 'miter',
                 data: this.props.salesData.map(retail   => retail.retailSales
@@ -26,8 +26,8 @@ class Chart extends Component {
                 type: 'line',
                 fill: false,
                 lineTension: 0.5,
-                backgroundColor: 'rgba(192,192,192,0.4)',
-                borderColor: 'rgba(192,192,192,1)',
+                backgroundColor: '#98A4BE',
+                borderColor: '#98A4BE',
                 borderCapStyle: 'butt',
                 borderJoinStyle: 'miter',
                 data: this.props.salesData.map(whole   => whole.wholesaleSales

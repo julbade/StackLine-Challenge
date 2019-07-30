@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import '../styles/details.css';
 
@@ -12,6 +13,13 @@ class Details extends Component {
                 <h3>{this.props.title}</h3>
                 <p>{this.props.subtitle}</p>
                 <hr/>
+                {this.props.tags.map((tag, index) => {
+                    return (
+                        <span style={{ padding: 10}} key={index}>
+                            <button style={{ padding: 7}}>{tag}</button>
+                        </span>
+                    )
+                })}
                 <h3>Details:</h3>
                 {this.props.detailsData.map((detail, index) => {
                     return(
@@ -21,6 +29,7 @@ class Details extends Component {
                     )
                 })}
                 <hr/>
+                
                 </div>
         </div>
         ) 
