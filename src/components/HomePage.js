@@ -22,11 +22,11 @@ import '../styles/homepage.css';
         if (this.props.data[0]) {
             console.log(this.props.data[0].sales[0])
             return (
-              <div className="home">
+              <div className="container">
                 <Header/>
-                <Grid container style={{backgroundColor: "white"}}>
+                <Grid container >
                     <Grid className="details" item sm={4}>
-                        <div  className="container">
+                        <div className="container">
                             <Details 
                             detailsData={this.props.data[0].details} 
                             image={this.props.data[0].image}
