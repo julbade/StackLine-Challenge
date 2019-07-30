@@ -9,3 +9,10 @@
     font-size: 13px;
     text-align: center;
 }
+
+.icon {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    padding: 10px;
+}

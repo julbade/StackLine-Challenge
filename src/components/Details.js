@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faHome, faChartBar} from '@fortawesome/free-solid-svg-icons';
 
 import '../styles/details.css';
 
@@ -16,7 +17,7 @@ class Details extends Component {
                 {this.props.tags.map((tag, index) => {
                     return (
                         <span style={{ padding: 10}} key={index}>
-                            <button style={{ padding: 7}}>{tag}</button>
+                            <button style={{ padding: 4}}>{tag}</button>
                         </span>
                     )
                 })}
@@ -29,7 +30,14 @@ class Details extends Component {
                     )
                 })}
                 <hr/>
-                
+                <div className="icon">
+                <FontAwesomeIcon style={{marginRight: 10}} icon={faHome}/>    
+                   <h2>Overview</h2>
+                </div>
+                <div className="icon">
+                    <FontAwesomeIcon  style={{marginRight: 10}} icon={faChartBar}/>
+                    <h2>Sales</h2>
+                </div>
                 </div>
         </div>
         ) 
