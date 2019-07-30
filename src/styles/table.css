@@ -1,0 +1,30 @@
+th, td {
+    padding: 20px;
+}
+tr:nth-child(even) {
+    background-color: white
+  }
+
+#tableHeader {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 15px;
+    background-color: rgba(75,192,192,0.6);
+    
+}
+
+.tableRow {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 12px;
+    background-color: rgb(230, 230, 230);
+    
+
+}
+.tableRow:hover {
+    border: 2px solid black;
+    text-align: center;
+    font-size: 17px;
+    
+
+}
